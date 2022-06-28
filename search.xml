@@ -31,11 +31,11 @@
     
     
     <entry>
-      <title>测试2</title>
+      <title>测试</title>
       <link href="TestURL/"/>
       <url>TestURL/</url>
       
-        <content type="html"><![CDATA[<p>uesdwadwadaf</p><p><img src="/TestURL/5f0bc529c56a45e192d1f86e2d468cad.png" alt="img"></p>]]></content>
+        <content type="html"><![CDATA[<p>uesdwadwadaf</p><p><img src="/5f0bc529c56a45e192d1f86e2d468cad.png" alt="img"></p>]]></content>
       
       
       <categories>
@@ -58,11 +58,11 @@
     
     
     <entry>
-      <title>测试</title>
+      <title>测试2</title>
       <link href="TestURL/"/>
       <url>TestURL/</url>
       
-        <content type="html"><![CDATA[<p>uesdwadwadaf</p><p><img src="/5f0bc529c56a45e192d1f86e2d468cad.png" alt="img"></p>]]></content>
+        <content type="html"><![CDATA[<p>uesdwadwadaf</p><p><img src="/TestURL/5f0bc529c56a45e192d1f86e2d468cad.png" alt="img"></p>]]></content>
       
       
       <categories>
