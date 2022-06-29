@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>图形流水线</title>
+      <link href="Renderer-Pipeline-Instruction/"/>
+      <url>Renderer-Pipeline-Instruction/</url>
+      
+        <content type="html"><![CDATA[<p>参考视频：<a href="https://www.bilibili.com/video/BV1L54y1s7xw">【技术美术百人计划】图形 1.1 渲染流水线</a></p><h3 id="图形渲染流水线总流程"><a href="#图形渲染流水线总流程" class="headerlink" title="图形渲染流水线总流程"></a><strong>图形渲染流水线总流程</strong></h3><p><img src="/Renderer-Pipeline-Instruction/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dzV2luZA==,size_16,color_FFFFFF,t_70.png" alt="渲染流程"></p><h3 id="应用阶段"><a href="#应用阶段" class="headerlink" title="应用阶段"></a><strong>应用阶段</strong></h3><p>1.准备基本场景数据<br>包括场景物体数据（物体的缩放、旋转、位置、uv贴图、顶点位置等），摄像机数据，光源及阴影数据等等<br>2.粗粒度剔除<br>包括视锥体剔除和遮挡剔除<br>-视锥体剔除，剔除在视锥体外的物体<br>-遮挡剔除，如K-D树（轴对称的BSP树），八叉树，BVH树/AABB树算法等<br>3.进行渲染设置<br>-绘制设置——设置着色器，合批方式<br>-设置渲染模式——前向渲染/延迟渲染<br>-设置绘制物体的顺序——z深度/材质RenderQueue<br> -设置渲染目标——输出到FrameBuffer/RenderTexure</p><h3 id="几何阶段"><a href="#几何阶段" class="headerlink" title="几何阶段"></a><strong>几何阶段</strong></h3><p>1.顶点着色器——顶点的空间变化和着色<br>2.曲面细分着色器（可选）——细分图元<br>3.几何着色器（可选）——对细分的图元着色<br>4.顶点裁剪——剔除视锥体外的物体、也可以设置剔除物体的正面或背面<br>5.屏幕映射——将图元转换到屏幕坐标系中得到归一化的屏幕设备坐标（NDC）</p><h3 id="光栅化阶段"><a href="#光栅化阶段" class="headerlink" title="光栅化阶段"></a><strong>光栅化阶段</strong></h3><p>1.三角形设置——得到三角形网格的边界信息<br>2.三角形遍历——检查屏幕上每个像素是否被三角形覆盖，并使用三角形三个顶点的信息对三角形内部进行颜色插值<br>3.片元着色器——对每个片元进行着色</p><h3 id="逐片元操作（属于光栅化阶段）"><a href="#逐片元操作（属于光栅化阶段）" class="headerlink" title="逐片元操作（属于光栅化阶段）"></a><strong>逐片元操作（属于光栅化阶段）</strong></h3><p>1.透明度测试，依据每个片元的alpha值来确定是否渲染此片元<br>2.模板测试，对每个片元使用一个自定义的值来确定是否渲染此片元<br>3.深度测试，依据每个片元的深度值来确定是否渲染此片元<br><img src="/Renderer-Pipeline-Instruction/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dzV2luZA==,size_16,color_FFFFFF,t_70-16565144927101.png" alt="深度测试和模板测试"></p><p>4.颜色混合，例如不透明物体被透明物体遮挡，则需要混合两者的颜色<br><img src="/Renderer-Pipeline-Instruction/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dzV2luZA==,size_16,color_FFFFFF,t_70-16565144927112.png" alt="颜色混合"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 图形学 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>PBR光照计算公式介绍</title>
       <link href="Physical-Based-Rendering-And-BRDF/"/>
       <url>Physical-Based-Rendering-And-BRDF/</url>
